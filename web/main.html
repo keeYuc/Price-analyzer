@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keeyu</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+        <p v-html="message"></p>
+        <button @click="add">+</button>
+        <span>{{value}}</span>
+        <button @click="sub">-</button>
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2496571732,442429806&fm=26&gp=0.jpg"
+            v-show="value%2">
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: "<p href='xxx'>heum<a>",
+                value: 0,
+                is: true
+            },
+            methods: {
+                doit: function () {
+                    this.message = "xxx"
+                    alert("xxxxxxxx")
+                },
+                add: function () {
+                    this.value++
+                    if (this.value > 99) {
+                        this.value = 0
+                    }
+                },
+                sub: function () {
+                    this.value--
+                    if (this.value < 0) {
+                        this.value = 100
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
