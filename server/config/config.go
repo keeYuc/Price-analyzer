@@ -10,8 +10,8 @@ import (
 )
 
 type Config struct {
-	Header []Data `yaml:"header"`
-	Gos    int64  `yaml:"gos"`
+	CommonHead []Data `yaml:"commonHead"`
+	Cookies    []Data `yaml:"cookies"`
 }
 
 type Data struct {
