@@ -1,11 +1,13 @@
 package jobs
 
 import (
+	"context"
 	"fmt"
 	"math/rand"
 	"net/http"
 	"server/config"
 	"server/data"
+	"server/mongo"
 	"time"
 )
 
@@ -31,24 +33,31 @@ func getRandRequest(page, size int) (*http.Request, error) {
 }
 
 func RunCrawler() {
-	size := config.Get().Size
+	// size := config.Get().Size
 	c := http.Client{}
-	i := 137
+	i := 136
 	defer func() {
-		recover()
+		err := recover()
+		fmt.Println(err)
 		fmt.Printf("读到【%d】页了", i)
 	}()
 	for ; ; i++ {
-		request, err := getRandRequest(i, size)
+		request, err := getRandRequest(i, 30)
 		if err != nil {
 			fmt.Println(err)
 		}
 		response, err := c.Do(request)
+		if err != nil {
+			fmt.Println(err)
+		}
 		temp, err := data.GetDataResponse(response.Body)
 		if err != nil {
 			fmt.Println(err)
 		}
-		fmt.Println(temp.Data.Count)
+		table := mongo.GetMg().Collection("price")
+		for _, v := range temp.Data.List {
+			table.InsertOne(context.TODO(), v)
+		}
 	}
 }
 
