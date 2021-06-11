@@ -12,11 +12,16 @@ import (
 type Config struct {
 	CommonHead []Data `yaml:"commonHead"`
 	Cookies    []Data `yaml:"cookies"`
+	Mongo      Mongo  `yaml:"mongo"`
 }
 
 type Data struct {
 	Key   string `yaml:"key"`
 	Value string `yaml:"value"`
+}
+
+type Mongo struct {
+	Uri string `yaml:"uri"`
 }
 
 var config Config
