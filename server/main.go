@@ -1,7 +1,9 @@
 package main
 
-// "github.com/tidwall/gjson"
+import (
+	"server/mongo"
+)
 
 func main() {
-
+	mongo.GetMg().Collection("price")
 }

@@ -1,10 +1,10 @@
 package data
 
-import "gopkg.in/yaml.v2"
+import "encoding/json"
 
-func Get(data []byte) (DataResponse, error) {
+func GetDataResponse(data []byte) (DataResponse, error) {
 	r := DataResponse{}
-	err := yaml.Unmarshal(data, &r)
+	err := json.Unmarshal(data, &r)
 	if err != nil {
 		return r, err
 	}

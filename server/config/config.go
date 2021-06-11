@@ -21,7 +21,8 @@ type Data struct {
 }
 
 type Mongo struct {
-	Uri string `yaml:"uri"`
+	Database string `yaml:"database"`
+	Uri      string `yaml:"uri"`
 }
 
 var config Config
