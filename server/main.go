@@ -14,7 +14,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	for _, v := range config.GetConfig().Header {
+	for _, v := range config.Get().Header {
 		request.Header.Set(v.Key, v.Value)
 	}
 	c := http.Client{}
