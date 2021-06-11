@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"net/http"
 	"server/config"
+	"server/data"
 	"time"
 )
 
@@ -15,7 +16,7 @@ func getHttpUrl(page, size int) string {
 }
 
 //*已经设置好随机cookie的请求了 直接用
-func GetRandRequest(page, size int) (*http.Request, error) {
+func getRandRequest(page, size int) (*http.Request, error) {
 	rand.Seed(time.Now().UnixNano())
 	request, err := http.NewRequest("GET", getHttpUrl(page, size), nil)
 	if err != nil {
@@ -29,9 +30,29 @@ func GetRandRequest(page, size int) (*http.Request, error) {
 	return request, nil
 }
 
+func RunCrawler() {
+	size := config.Get().Size
+	c := http.Client{}
+	i := 137
+	defer func() {
+		recover()
+		fmt.Printf("读到【%d】页了", i)
+	}()
+	for ; ; i++ {
+		request, err := getRandRequest(i, size)
+		if err != nil {
+			fmt.Println(err)
+		}
+		response, err := c.Do(request)
+		temp, err := data.GetDataResponse(response.Body)
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(temp.Data.Count)
+	}
+}
+
 // func GetTest() {
-// 	c := http.Client{}
-// 	response, err := c.Do(request)
 // 	if err != nil {
 // 		fmt.Println(err)
 // 	}

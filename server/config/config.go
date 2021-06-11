@@ -13,6 +13,7 @@ type Config struct {
 	CommonHead []Data `yaml:"commonHead"`
 	Cookies    []Data `yaml:"cookies"`
 	Mongo      Mongo  `yaml:"mongo"`
+	Size       int    `yaml:"size"`
 }
 
 type Data struct {

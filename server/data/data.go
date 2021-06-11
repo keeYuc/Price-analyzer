@@ -1,10 +1,21 @@
 package data
 
-import "encoding/json"
+import (
+	"compress/gzip"
+	"encoding/json"
+	"io"
+	"io/ioutil"
+)
 
-func GetDataResponse(data []byte) (DataResponse, error) {
+func GetDataResponse(read io.Reader) (DataResponse, error) {
 	r := DataResponse{}
-	err := json.Unmarshal(data, &r)
+	g, err := gzip.NewReader(read)
+	defer g.Close()
+	datas, err := ioutil.ReadAll(g)
+	if err != nil {
+		return r, err
+	}
+	err = json.Unmarshal(datas, &r)
 	if err != nil {
 		return r, err
 	}
