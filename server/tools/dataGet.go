@@ -9,7 +9,7 @@ import (
 )
 
 func GetTest() {
-	url := "https://xueqiu.com/service/v5/stock/screener/quote/list?page=2&size=90&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1623336144629s"
+	url := "https://xueqiu.com/service/v5/stock/screener/quote/list?page=2&size=90&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1623397949815"
 	request, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		panic(err)
