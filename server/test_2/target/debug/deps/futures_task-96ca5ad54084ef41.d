@@ -1,0 +1,11 @@
+c:\code_file\r_file\yew-wasm-pack-minimal\target\debug\deps\futures_task-96ca5ad54084ef41.rmeta: C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\lib.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\spawn.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\future_obj.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\noop_waker.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\arc_wake.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\waker.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\waker_ref.rs
+
+c:\code_file\r_file\yew-wasm-pack-minimal\target\debug\deps\futures_task-96ca5ad54084ef41.d: C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\lib.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\spawn.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\future_obj.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\noop_waker.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\arc_wake.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\waker.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\waker_ref.rs
+
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\lib.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\spawn.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\future_obj.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\noop_waker.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\arc_wake.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\waker.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-task-0.3.15\src\waker_ref.rs:

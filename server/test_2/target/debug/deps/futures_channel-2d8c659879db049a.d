@@ -1,0 +1,10 @@
+c:\code_file\r_file\yew-wasm-pack-minimal\target\debug\deps\futures_channel-2d8c659879db049a.rmeta: C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lib.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lock.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\mod.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\queue.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\sink_impl.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\oneshot.rs
+
+c:\code_file\r_file\yew-wasm-pack-minimal\target\debug\deps\futures_channel-2d8c659879db049a.d: C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lib.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lock.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\mod.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\queue.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\sink_impl.rs C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\oneshot.rs
+
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lib.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lock.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\mod.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\queue.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\sink_impl.rs:
+C:\Users\52500\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\oneshot.rs:
