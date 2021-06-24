@@ -42,6 +42,7 @@ func RunCrawler() {
 		fmt.Printf("读到【%d】页了", i)
 	}()
 	for ; ; i++ {
+		request, err := getRandRequest(i, 90)
 		if err != nil {
 			fmt.Println(err)
 		}
