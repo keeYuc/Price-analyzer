@@ -22,6 +22,11 @@ func GetDataResponse(read io.Reader) (DataResponse, error) {
 	return r, nil
 }
 
+type Stock_id struct {
+	Id    string `bson:"id"`
+	Level string `bson:"level"`
+}
+
 //* 直接拿json 去网站转化一下即可
 type DataResponse struct {
 	Data struct {
