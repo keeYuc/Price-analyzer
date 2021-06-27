@@ -23,7 +23,7 @@ while (rs.error_code == '0') & rs.next():
     data_list.append(rs.get_row_data())
 result = pd.DataFrame(data_list, columns=rs.fields)
 #### 结果集输出到csv文件 ####
-result.to_csv("./.csv", encoding="gbk", index=False)
+result.to_csv("./a.csv", encoding="gbk", index=False)
 print(result)
 
 #### 登出系统 ####
