@@ -6,10 +6,15 @@ async fn hello() -> impl Responder {
     HttpResponse::Ok().body("hello")
 }
 
+async fn test() -> impl Responder {
+    println!("get a request");
+    HttpResponse::Ok().body("test")
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| App::new().service(hello))
-        .bind("127.0.0.1:8080")?
+    HttpServer::new(|| App::new().service(hello).route("/a", web::get().to(test)))
+        .bind("127.0.0.1:8888")?
         .run()
         .await
 }
