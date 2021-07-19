@@ -5,6 +5,7 @@ use serde::Deserialize;
 use std::time::SystemTime;
 
 const MAPKEY: &str = "status";
+const RUNKEY: &str = "run";
 
 #[derive(Deserialize)]
 struct Thing {
@@ -52,8 +53,20 @@ fn hget_map(s: &String) -> redis::RedisResult<u32> {
 fn hset_map(s: &String) -> redis::RedisResult<u32> {
     let client = redis::Client::open("redis://127.0.0.1/")?;
     let mut con = client.get_connection()?;
+    con.hset(MAPKEY, s, 0)
+}
+
+fn hget_map_run(s: &String) -> redis::RedisResult<u32> {
+    let client = redis::Client::open("redis://127.0.0.1/")?;
+    let mut con = client.get_connection()?;
+    con.hget(RUNKEY, s)
+}
+
+fn hset_map_run(s: &String) -> redis::RedisResult<u32> {
+    let client = redis::Client::open("redis://127.0.0.1/")?;
+    let mut con = client.get_connection()?;
     match SystemTime::now().duration_since(SystemTime::UNIX_EPOCH) {
-        Ok(n) => con.hset(MAPKEY, s, n.as_secs()),
+        Ok(n) => con.hset(RUNKEY, s, n.as_secs()),
         Err(_) => panic!("SystemTime before UNIX EPOCH!"),
     }
 }
