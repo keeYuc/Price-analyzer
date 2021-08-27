@@ -28,10 +28,24 @@ func createIndex(m *mongo.Database) {
 			Keys:    bson.D{{"code", 1}},
 			Options: options.Index().SetUnique(true).SetName("code"),
 		},
+		{
+			Keys:    bson.D{{"roe", 1}},
+			Options: options.Index().SetName("roe"),
+		},
 	})
-	for i := 1; i <= config.Get().Mongo.DaySize; i++ {
-
-	}
+	// for i := 1; i <= config.Get().Mongo.DaySize; i++ {
+	// 	c_day := mg.Collection(fmt.Sprintf("%s:%d", config.Get().Mongo.AllCode, i))
+	// 	c_day.Indexes().CreateMany(context.TODO(), []mongo.IndexModel{
+	// 		{
+	// 			Keys:    bson.D{{"code", 1}},
+	// 			Options: options.Index().SetName("code"),
+	// 		},
+	// 		{
+	// 			Keys:    bson.D{{"day", 1}},
+	// 			Options: options.Index().SetName("day"),
+	// 		},
+	// 	})
+	// }
 }
 
 func initMongo() {
